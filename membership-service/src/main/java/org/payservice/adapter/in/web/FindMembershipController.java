@@ -1,11 +1,10 @@
 package org.payservice.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
+import org.payservice.WebAdapter;
 import org.payservice.application.port.in.FindMembershipCommand;
 import org.payservice.application.port.in.FindMembershipUseCase;
-import org.payservice.common.WebAdapter;
 import org.payservice.domain.Membership;
-import org.payservice.domain.Membership.MembershipId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

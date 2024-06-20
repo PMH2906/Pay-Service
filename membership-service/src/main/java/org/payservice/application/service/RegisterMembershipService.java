@@ -1,12 +1,12 @@
 package org.payservice.application.service;
 
 import lombok.RequiredArgsConstructor;
+import org.payservice.UseCase;
 import org.payservice.adapter.out.persistence.MembershipJpaEntity;
 import org.payservice.adapter.out.persistence.MembershipMapper;
 import org.payservice.application.port.in.RegisterMembershipCommand;
 import org.payservice.application.port.in.RegisterMembershipUseCase;
 import org.payservice.application.port.out.RegisterMembershipPort;
-import org.payservice.common.UseCase;
 import org.payservice.domain.Membership;
 import org.payservice.domain.Membership.MembershipAddress;
 import org.payservice.domain.Membership.MembershipEmail;

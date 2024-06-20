@@ -1,4 +1,4 @@
-package org.payservice.common;
+package org.payservice;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

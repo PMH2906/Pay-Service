@@ -1,4 +1,4 @@
-package org.payservice.common;
+package org.payservice;
 
 import java.util.Set;
 import javax.validation.ConstraintViolation;

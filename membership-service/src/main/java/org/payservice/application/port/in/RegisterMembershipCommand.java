@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.payservice.common.SelfValidating;
+import org.payservice.SelfValidating;
 
 @Builder
 @Data

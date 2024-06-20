@@ -1,6 +1,5 @@
 package org.payservice.application.port.in;
 
-import org.payservice.common.UseCase;
 import org.payservice.domain.Membership;
 
 /**

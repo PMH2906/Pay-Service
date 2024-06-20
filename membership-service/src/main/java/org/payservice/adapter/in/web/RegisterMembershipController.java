@@ -2,9 +2,9 @@ package org.payservice.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
 
+import org.payservice.WebAdapter;
 import org.payservice.application.port.in.RegisterMembershipCommand;
 import org.payservice.application.port.in.RegisterMembershipUseCase;
-import org.payservice.common.WebAdapter;
 import org.payservice.domain.Membership;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
