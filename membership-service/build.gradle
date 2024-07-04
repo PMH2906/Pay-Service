@@ -21,7 +21,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group 'org.payservice.membership'
-version '1.0.3'
+version '1.0.1'
 
 repositories {
     mavenCentral()
