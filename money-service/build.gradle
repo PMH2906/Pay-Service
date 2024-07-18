@@ -20,7 +20,7 @@ apply plugin: 'java-library'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group 'org.payservice.membership'
+group 'org.payservice.money'
 version '1.0.0'
 
 repositories {

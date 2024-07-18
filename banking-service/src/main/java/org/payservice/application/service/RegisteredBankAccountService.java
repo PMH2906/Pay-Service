@@ -8,6 +8,8 @@ import org.payservice.adapter.out.persistence.RegisteredBankAccountJpaEntity;
 import org.payservice.adapter.out.persistence.RegisteredBankAccountMapper;
 import org.payservice.application.port.in.RegisteredBankAccountCommand;
 import org.payservice.application.port.in.RegisteredBankAccountUseCase;
+import org.payservice.application.port.out.GetMembershipPort;
+import org.payservice.application.port.out.MembershipStatus;
 import org.payservice.application.port.out.RegisteredBankAccountPort;
 import org.payservice.application.port.out.RequestBankAccountInfoPort;
 import org.payservice.domain.RegisteredBankAccount;
@@ -25,12 +27,19 @@ public class RegisteredBankAccountService implements RegisteredBankAccountUseCas
     private final RegisteredBankAccountPort registeredBankAccountPort;
     private final RegisteredBankAccountMapper mapper;
     private final RequestBankAccountInfoPort requestBankAccountInfoPort;
+    private final GetMembershipPort getMembershipPort;
 
     @Override
     public RegisteredBankAccount registerBankAccount(RegisteredBankAccountCommand command) {
 
         // 은행 계좌 등록
-        command.getMembershipId();
+        // command.getMembershipId();
+
+        // membership-service와 http 통신하여 membershipStatus get
+        MembershipStatus membershipStatus = getMembershipPort.getMembership(command.getMembershipId());
+        if(!membershipStatus.isValid()) {
+            return null;
+        }
 
         // 1. 외부 실제 은행에 등록이 가능한 계좌인지 확인
         // 외부와 통신해야함 Biz -> Adapter -> External System

@@ -19,7 +19,7 @@ public class RegisteredBankAccountController {
 
     private final RegisteredBankAccountUseCase registeredBankAccountUseCase;
     @PostMapping(path = "/banking/account/register")
-    RegisteredBankAccount registerMembership(@RequestBody RegisteredBankAccountRequest request){
+    RegisteredBankAccount registerAccountBank(@RequestBody RegisteredBankAccountRequest request){
 
         // request -> Command
 
